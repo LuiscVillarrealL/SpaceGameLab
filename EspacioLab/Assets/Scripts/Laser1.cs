@@ -5,10 +5,12 @@ using UnityEngine;
 
 public class Laser1 : MonoBehaviour
 {
-
+    [Header("Proyectiles")]
     [SerializeField] GameObject laserPrefab;
     [SerializeField] float laserSpeed = 10f;
     [SerializeField] float tiempoDeDisparo = 0.1f;
+    [SerializeField] AudioClip playerShootSound;
+    [SerializeField] [Range(0, 1)] float shootSoundVolume = 0.5f;
 
     Coroutine firingCoroutine;
 
@@ -43,6 +45,7 @@ public class Laser1 : MonoBehaviour
             GameObject laser = Instantiate(laserPrefab, transform.position, Quaternion.identity) as GameObject;
 
             laser.GetComponent<Rigidbody2D>().velocity = new Vector2(0, laserSpeed);
+            AudioSource.PlayClipAtPoint(playerShootSound, Camera.main.transform.position, shootSoundVolume);
 
             yield return new WaitForSeconds(tiempoDeDisparo);
         }

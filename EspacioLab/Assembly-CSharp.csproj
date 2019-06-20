@@ -53,13 +53,19 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\BackgroundScroller.cs" />
+     <Compile Include="Assets\Scripts\DamageDealer.cs" />
      <Compile Include="Assets\Scripts\Enemy.cs" />
      <Compile Include="Assets\Scripts\EnemyPathing.cs" />
+     <Compile Include="Assets\Scripts\EnemySpawner.cs" />
      <Compile Include="Assets\Scripts\Laser1.cs" />
      <Compile Include="Assets\Scripts\Player.cs" />
+     <Compile Include="Assets\Scripts\Score.cs" />
+     <Compile Include="Assets\Scripts\ScoreDisplay.cs" />
      <Compile Include="Assets\Scripts\Shredder.cs" />
+     <Compile Include="Assets\Scripts\SpawningMio.cs" />
+     <Compile Include="Assets\Scripts\WaveConf.cs" />
      <Compile Include="Assets\StarSparrow\Readme\Readme Files\Scripts\Readme.cs" />
-     <None Include="Assets\space-kit-1.0\License.txt" />
  <Reference Include="Unity.Timeline.Editor">
  <HintPath>C:/Users/Luisk/Desktop/Gamesunity/SpaceGameLab/EspacioLab/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
  </Reference>

@@ -5,52 +5,47 @@ using UnityEngine;
 public class EnemyPathing : MonoBehaviour
 {
 
-    [SerializeField] GameObject spawnObject;
-    [SerializeField] List<Transform> waypoints;
-
-    [SerializeField] float maxTime = 2;
-    [SerializeField] float minTime = 0;
-
-    private float time;
-
-    private float spawnTime;
+    [SerializeField] WaveConf waveConf;
+    List<Transform> waypoints;
+    
+    int wayPointIndex = 0;
 
     // Start is called before the first frame update
     void Start()
     {
-        SetRandomTime();
-        time = minTime;
+        waypoints = waveConf.GetWaypoints();
+        transform.position = waypoints[wayPointIndex].transform.position;
     }
 
-    void FixedUpdate()
+    // Update is called once per frame
+    void Update()
     {
+        Move();
+    }
 
-        //Counts up
-        time += Time.deltaTime;
+    public void SetWaveConfig(WaveConf waveConf)
+    {
+        this.waveConf = waveConf;
+    }
 
-        //Check if its the right time to spawn the object
-        if (time >= spawnTime)
+    private void Move()
+    {
+        if (wayPointIndex <= waypoints.Count - 1)
         {
-            SpawnObject();
-            SetRandomTime();
+
+
+            var targetPosition = waypoints[wayPointIndex].transform.position;
+            var movThisFrame = waveConf.GetMoveSpeed() * Time.deltaTime;
+            transform.position = Vector2.MoveTowards(transform.position, targetPosition, movThisFrame);
+
+            if (transform.position == targetPosition)
+            {
+                wayPointIndex++;
+            }
         }
-
+        else
+        {
+            Destroy(gameObject);
+        }
     }
-
-    //Spawns the object and resets the time
-    void SpawnObject()
-    {
-        time = 0;
-
-        Instantiate(spawnObject, waypoints[Random.Range(0,3)].transform.position, spawnObject.transform.rotation);
-    }
-
-    //Sets the random time between minTime and maxTime
-    void SetRandomTime()
-    {
-        spawnTime = Random.Range(minTime, maxTime);
-    }
-
-
-
 }

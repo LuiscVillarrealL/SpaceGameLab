@@ -7,10 +7,14 @@ public class Player : MonoBehaviour
 {
     // Start is called before the first frame update
 
+    [Header("Player")]
     [SerializeField] float moveSpeed = 10f;
     [SerializeField] float rotSpeed = .4f;
     [SerializeField] float padding = 1f;
-    
+    [SerializeField] int health = 200;
+    [SerializeField] [Range(0, 1)] float deathSoundVolume = 0.7f;
+    [SerializeField] AudioClip deathSound;
+
 
     float xMin;
     float xMax;
@@ -23,7 +27,10 @@ public class Player : MonoBehaviour
     {
         SetMoveBoundaries();
         rb = GetComponent<Rigidbody2D>();
-        
+        print(xMin);
+        print(xMax);
+        print(yMin);
+        print(yMax);
 
     }
 
@@ -32,7 +39,7 @@ public class Player : MonoBehaviour
     void Update()
     {
         Move();
-        Shoot();
+       // Shoot();
         
 
 
@@ -49,8 +56,14 @@ public class Player : MonoBehaviour
 
         //movimiento horizontal
         var deltaX = Input.GetAxis("Horizontal") * Time.deltaTime * moveSpeed;  //puede usarse el keydown 
+
+        var deltaY = Input.GetAxis("Vertical") * Time.deltaTime * moveSpeed;
         var newXPos = Mathf.Clamp(transform.position.x + deltaX, xMin, xMax);
-        transform.position = new Vector2(newXPos, transform.position.y);
+ 
+        var newYPos = Mathf.Clamp(transform.position.y + deltaY, yMin, yMax);
+        transform.position = new Vector2(newXPos, newYPos);
+
+
 
         /*float speedX = rb.velocity.x;
        // print(speedX);
@@ -83,6 +96,38 @@ public class Player : MonoBehaviour
         
         xMin = gameCamera.ViewportToWorldPoint(new Vector3(0,0,0)).x + padding;
         xMax = gameCamera.ViewportToWorldPoint(new Vector3(1, 0, 0)).x - padding;
+        yMin = gameCamera.ViewportToWorldPoint(new Vector3(0, 0, 0)).y + padding;
+        yMax = gameCamera.ViewportToWorldPoint(new Vector3(0, 1, 0)).y - padding;
+
+        
+    }
+
+
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        DamageDealer damageDealer = other.gameObject.GetComponent<DamageDealer>();
+        if (!damageDealer) {
+            return;
+        }
+        
+        Hit(damageDealer);
+    }
+
+    private void Hit(DamageDealer damageDealer)
+    {
+        health -= damageDealer.GetDamage();
+        damageDealer.Hit();
+        if (health <= 0)
+        {
+            Die();
+        }
+    }
+
+    private void Die()
+    {
+        Destroy(this.gameObject);
+        AudioSource.PlayClipAtPoint(deathSound, Camera.main.transform.position, deathSoundVolume);
     }
 
 }
