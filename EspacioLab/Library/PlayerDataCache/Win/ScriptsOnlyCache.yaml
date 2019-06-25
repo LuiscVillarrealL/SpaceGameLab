@@ -32,9 +32,9 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.Button
     - UnityEngine.UI.CanvasScaler
     - UnityEngine.UI.GraphicRaycaster
-    - UnityEngine.UI.Text
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
+    - UnityEditor.TestTools.TestRunner.TestListCacheData
   sceneClasses:
     Assets/Scenes/Game Over.unity:
     - Class: 1
@@ -210,8 +210,6 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11084}
     - Class: 114
-      Script: {instanceID: 11098}
-    - Class: 114
       Script: {instanceID: 11360}
     - Class: 114
       Script: {instanceID: 11448}
@@ -228,9 +226,13 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11850}
     - Class: 114
+      Script: {instanceID: 12142}
+    - Class: 114
       Script: {instanceID: 12204}
     - Class: 114
       Script: {instanceID: 12272}
+    - Class: 114
+      Script: {instanceID: 12340}
     - Class: 114
       Script: {instanceID: 12406}
     - Class: 114
@@ -240,8 +242,6 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 12844}
     - Class: 115
-      Script: {instanceID: 0}
-    - Class: 128
       Script: {instanceID: 0}
     - Class: 157
       Script: {instanceID: 0}
