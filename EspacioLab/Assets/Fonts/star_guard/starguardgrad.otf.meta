@@ -1,0 +1,23 @@
+fileFormatVersion: 2
+guid: 9c8fcf4c5cc4cf1438e9ae7d7049592d
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Star Guard Gradient
+  fontNames:
+  - Star Guard Gradient
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 8a3379e1365feef4f837108fa0f482d4, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

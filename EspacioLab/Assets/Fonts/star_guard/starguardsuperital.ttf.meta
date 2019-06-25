@@ -1,0 +1,23 @@
+fileFormatVersion: 2
+guid: b575b91d13e23154a8cb2760014efaa6
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Star Guard Super-Italic
+  fontNames:
+  - Star Guard Super-Italic
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 11aba21d216425f4bbbe197fc561cc19, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

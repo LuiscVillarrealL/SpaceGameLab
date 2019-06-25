@@ -1,0 +1,23 @@
+fileFormatVersion: 2
+guid: ff78d2006c5fe6749be9d73b2cac13be
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Star Guard Mid-Case Italic
+  fontNames:
+  - Star Guard Mid-Case Italic
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 149ae9ba93e332449ac7a5aaba6c2e7f, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

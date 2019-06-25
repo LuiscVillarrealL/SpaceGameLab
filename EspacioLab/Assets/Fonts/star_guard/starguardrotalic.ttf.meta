@@ -1,0 +1,23 @@
+fileFormatVersion: 2
+guid: f7f50f5f0047691408b26c8965d654fe
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Star Guard Rotalic
+  fontNames:
+  - Star Guard Rotalic
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 13a9ebe75e6b9f84bab68cd6acc57f9a, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

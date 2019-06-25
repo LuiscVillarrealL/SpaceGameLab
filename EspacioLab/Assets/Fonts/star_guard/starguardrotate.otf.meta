@@ -1,0 +1,23 @@
+fileFormatVersion: 2
+guid: 4e7a365b09e86174395b1cfe28b75bd9
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Star Guard Rotated
+  fontNames:
+  - Star Guard Rotated
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 710efc3b826cd264097c58d8dbfcd57d, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

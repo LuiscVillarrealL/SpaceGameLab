@@ -1,0 +1,23 @@
+fileFormatVersion: 2
+guid: 483df83dd03d76840a509e78b2fc295f
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Star Guard Italic
+  fontNames:
+  - Star Guard Italic
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 10281d6ae1a425e48be391df2901759a, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
