@@ -27,10 +27,7 @@ public class Player : MonoBehaviour
     {
         SetMoveBoundaries();
         rb = GetComponent<Rigidbody2D>();
-        print(xMin);
-        print(xMax);
-        print(yMin);
-        print(yMax);
+        
 
     }
 
@@ -39,8 +36,8 @@ public class Player : MonoBehaviour
     void Update()
     {
         Move();
-       // Shoot();
-        
+        // Shoot();
+       
 
 
     }

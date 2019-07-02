@@ -21,7 +21,7 @@ public class Score : MonoBehaviour
     public void AddToScore(int scoreValue)
     {
         score += scoreValue;
-        print(score);
+       // print(score);
     }
     
 }
