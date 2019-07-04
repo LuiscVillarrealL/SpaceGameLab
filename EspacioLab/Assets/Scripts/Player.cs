@@ -11,9 +11,13 @@ public class Player : MonoBehaviour
     [SerializeField] float moveSpeed = 10f;
     [SerializeField] float rotSpeed = .4f;
     [SerializeField] float padding = 1f;
-    [SerializeField] int health = 200;
+    public int health = 3;
     [SerializeField] [Range(0, 1)] float deathSoundVolume = 0.7f;
     [SerializeField] AudioClip deathSound;
+    [SerializeField] GameObject deathVFX;
+    [SerializeField] float durationOfExplosion = 1f;
+
+    public Health vidas;
 
 
     float xMin;
@@ -107,7 +111,7 @@ public class Player : MonoBehaviour
         if (!damageDealer) {
             return;
         }
-        
+       
         Hit(damageDealer);
     }
 
@@ -115,10 +119,28 @@ public class Player : MonoBehaviour
     {
         health -= damageDealer.GetDamage();
         damageDealer.Hit();
+        
         if (health <= 0)
         {
             Die();
         }
+    }
+
+    public void GolpeAsteroide()
+    {
+
+        health -= 1;
+
+        
+        if (health <= 0)
+        {
+            Die();
+        }
+    }
+
+    public int DarVida()
+    {
+        return health;
     }
 
     private void Die()
@@ -126,6 +148,8 @@ public class Player : MonoBehaviour
         FindObjectOfType<LevelController>().LoadGameOver();
         Destroy(this.gameObject);
         AudioSource.PlayClipAtPoint(deathSound, Camera.main.transform.position, deathSoundVolume);
+        GameObject explosion = Instantiate(deathVFX, transform.position, transform.rotation) as GameObject;
+        Destroy(explosion, durationOfExplosion);
     }
 
 }

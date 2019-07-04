@@ -10,6 +10,7 @@ public class AsteroidSpawner : MonoBehaviour
     public float spawnWait;
     public float startWait;
     public float waveWait;
+    public float tumble;
 
     void Start()
     {
@@ -25,7 +26,10 @@ public class AsteroidSpawner : MonoBehaviour
             {
                 Vector3 spawnPosition = new Vector3(Random.Range(-spawnValues.x, spawnValues.x), spawnValues.y, spawnValues.z);
                 Quaternion spawnRotation = Quaternion.identity;
-                Instantiate(hazard, spawnPosition, spawnRotation);
+                var newAsteroid = Instantiate(hazard, spawnPosition, spawnRotation);
+
+                newAsteroid.GetComponent<Rigidbody2D>().angularVelocity = UnityEngine.Random.Range(-tumble, tumble);
+                //newAsteroid.GetComponent<Rigidbody>().angularVelocity = new Vector3(UnityEngine.Random.Range(-tumble, tumble), UnityEngine.Random.Range(-tumble, tumble), UnityEngine.Random.Range(-tumble, tumble)) ;
                 yield return new WaitForSeconds(spawnWait);
             }
             yield return new WaitForSeconds(waveWait);

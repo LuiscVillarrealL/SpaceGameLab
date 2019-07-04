@@ -12,11 +12,22 @@ public class Asteroide : MonoBehaviour
 
     void Start()
     {
+        rb = GetComponent<Rigidbody2D>();
         rb.angularVelocity = UnityEngine.Random.Range(-tumble, tumble) ;
     }
     void Awake()
     {
+        rb = GetComponent<Rigidbody2D>();
         rb.angularVelocity = UnityEngine.Random.Range(-tumble, tumble);
+       // transform.rotation = new Quaternion(UnityEngine.Random.Range(-tumble, tumble), UnityEngine.Random.Range(-tumble, tumble), 0, 0);
+        transform.Rotate(UnityEngine.Random.Range(-tumble, tumble), UnityEngine.Random.Range(-tumble, tumble), UnityEngine.Random.Range(-tumble, tumble));
+
+    }
+
+
+    void Update()
+    {
+        transform.Rotate(UnityEngine.Random.Range(-tumble, tumble), UnityEngine.Random.Range(-tumble, tumble), UnityEngine.Random.Range(-tumble, tumble));
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -34,7 +45,7 @@ public class Asteroide : MonoBehaviour
             Destroy(gameObject);
         } else if (other.gameObject.GetComponent<Player>()){
             Player player = other.gameObject.GetComponent<Player>();
-            Destroy(player.gameObject);
+            player.GolpeAsteroide();
             Destroy(gameObject);
 
             print("hit collider 3d");

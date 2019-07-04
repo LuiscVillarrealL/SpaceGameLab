@@ -1,11 +1,14 @@
 ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
+    - AsteroidSpawner
+    - Asteroide
     - BackgroundScroller
     - DamageDealer
     - Enemy
     - EnemyPathing
     - EnemySpawner
+    - Health
     - Laser1
     - LevelController
     - MusicPlayer
@@ -32,6 +35,7 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.Button
     - UnityEngine.UI.CanvasScaler
     - UnityEngine.UI.GraphicRaycaster
+    - UnityEngine.UI.Image
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
     - UnityEditor.TestTools.TestRunner.TestListCacheData
@@ -60,23 +64,23 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 10906}
+      Script: {instanceID: 10926}
     - Class: 114
-      Script: {instanceID: 11518}
+      Script: {instanceID: 11538}
     - Class: 114
-      Script: {instanceID: 11726}
+      Script: {instanceID: 11748}
     - Class: 114
-      Script: {instanceID: 11830}
+      Script: {instanceID: 11852}
     - Class: 114
-      Script: {instanceID: 11898}
+      Script: {instanceID: 11920}
     - Class: 114
-      Script: {instanceID: 12122}
+      Script: {instanceID: 12144}
     - Class: 114
-      Script: {instanceID: 12320}
+      Script: {instanceID: 12342}
     - Class: 114
-      Script: {instanceID: 12386}
+      Script: {instanceID: 12408}
     - Class: 114
-      Script: {instanceID: 12758}
+      Script: {instanceID: 12782}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 157
@@ -123,31 +127,31 @@ ScriptsOnlyBuild:
     - Class: 109
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 10906}
-    - Class: 114
-      Script: {instanceID: 11518}
+      Script: {instanceID: 10926}
     - Class: 114
       Script: {instanceID: 11538}
     - Class: 114
-      Script: {instanceID: 11726}
+      Script: {instanceID: 11558}
     - Class: 114
-      Script: {instanceID: 11732}
+      Script: {instanceID: 11748}
     - Class: 114
-      Script: {instanceID: 11830}
+      Script: {instanceID: 11754}
     - Class: 114
-      Script: {instanceID: 11898}
+      Script: {instanceID: 11852}
     - Class: 114
-      Script: {instanceID: 12122}
+      Script: {instanceID: 11920}
     - Class: 114
-      Script: {instanceID: 12136}
+      Script: {instanceID: 12144}
     - Class: 114
-      Script: {instanceID: 12320}
+      Script: {instanceID: 12158}
     - Class: 114
-      Script: {instanceID: 12386}
+      Script: {instanceID: 12342}
     - Class: 114
-      Script: {instanceID: 12552}
+      Script: {instanceID: 12408}
     - Class: 114
-      Script: {instanceID: 12758}
+      Script: {instanceID: 12574}
+    - Class: 114
+      Script: {instanceID: 12782}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -204,43 +208,51 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 10906}
+      Script: {instanceID: 10926}
     - Class: 114
-      Script: {instanceID: 10918}
+      Script: {instanceID: 10938}
     - Class: 114
-      Script: {instanceID: 11064}
+      Script: {instanceID: 11084}
     - Class: 114
-      Script: {instanceID: 11340}
+      Script: {instanceID: 11138}
     - Class: 114
-      Script: {instanceID: 11428}
+      Script: {instanceID: 11360}
     - Class: 114
-      Script: {instanceID: 11518}
+      Script: {instanceID: 11448}
     - Class: 114
-      Script: {instanceID: 11634}
+      Script: {instanceID: 11538}
     - Class: 114
-      Script: {instanceID: 11650}
+      Script: {instanceID: 11654}
     - Class: 114
-      Script: {instanceID: 11726}
+      Script: {instanceID: 11670}
     - Class: 114
-      Script: {instanceID: 11732}
+      Script: {instanceID: 11690}
     - Class: 114
-      Script: {instanceID: 11830}
+      Script: {instanceID: 11748}
     - Class: 114
-      Script: {instanceID: 12122}
+      Script: {instanceID: 11754}
     - Class: 114
-      Script: {instanceID: 12184}
+      Script: {instanceID: 11852}
     - Class: 114
-      Script: {instanceID: 12252}
+      Script: {instanceID: 12144}
     - Class: 114
-      Script: {instanceID: 12320}
+      Script: {instanceID: 12206}
     - Class: 114
-      Script: {instanceID: 12386}
+      Script: {instanceID: 12274}
     - Class: 114
-      Script: {instanceID: 12390}
+      Script: {instanceID: 12342}
     - Class: 114
-      Script: {instanceID: 12758}
+      Script: {instanceID: 12408}
     - Class: 114
-      Script: {instanceID: 12824}
+      Script: {instanceID: 12412}
+    - Class: 114
+      Script: {instanceID: 12616}
+    - Class: 114
+      Script: {instanceID: 12782}
+    - Class: 114
+      Script: {instanceID: 12848}
+    - Class: 114
+      Script: {instanceID: 17958}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 157
@@ -414,7 +426,7 @@ ScriptsOnlyBuild:
     className: TMP_SubMeshUI
   - hash:
       serializedVersion: 2
-      Hash: 474a22aefc0ff27b017f2fa0b478de52
+      Hash: 49e335596681daeccf04e4519412f733
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Player
@@ -490,6 +502,12 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: DamageDealer
+  - hash:
+      serializedVersion: 2
+      Hash: b31913bdaaa36cff036399b883cd2714
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: AsteroidSpawner
   - hash:
       serializedVersion: 2
       Hash: b3ab2106268377ffe25dd18ac23dca28
@@ -672,6 +690,12 @@ ScriptsOnlyBuild:
     className: TMP_StyleSheet
   - hash:
       serializedVersion: 2
+      Hash: 813a98d7c38886af7cdb0e991a546577
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Asteroide
+  - hash:
+      serializedVersion: 2
       Hash: 5372ed2ce39229b1ac910757999a8be2
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
@@ -766,6 +790,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
+  - hash:
+      serializedVersion: 2
+      Hash: 0a68641a3468deab280b134aee6ddb29
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Health
   platform: 19
   scenePathNames:
   - Assets/Scenes/StartMenu.unity

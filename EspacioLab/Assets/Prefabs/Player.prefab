@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 8830852484275691944}
   - component: {fileID: 296089533909859291}
   - component: {fileID: 6023607626189742402}
+  - component: {fileID: 667793396380749242}
+  - component: {fileID: 6765025775132914915}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -84,7 +86,49 @@ MonoBehaviour:
   health: 200
   deathSoundVolume: 0.7
   deathSound: {fileID: 8300000, guid: 1f00ebe59f74ac7418790ec8e6a09177, type: 3}
+  deathVFX: {fileID: 3748067767298325701, guid: 8c1ad6b448e199c4e8a83c9c53a3a3c0,
+    type: 3}
+  durationOfExplosion: 1
   rb: {fileID: 0}
+--- !u!50 &667793396380749242
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4231814736961351073}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!114 &6765025775132914915
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4231814736961351073}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 401755552f26fda4a9e8a26a4ec1bc04, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 0
+  numOfLives: 0
+  vidas:
+  - {fileID: 0}
+  vidaLLena: {fileID: 0}
+  sinVida: {fileID: 0}
 --- !u!1 &7116242384974176670
 GameObject:
   m_ObjectHideFlags: 0
